@@ -1,0 +1,93 @@
+/* Center the form in the page */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://media.istockphoto.com/id/1372142727/photo/mowed-green-backyard-grass-under-trees-closeup-view.jpg?s=612x612&w=0&k=20&c=qQ3Q_Z6FAQ2-75J-m3RGgIcl7tch53RM9mFdb4J4YaU='); ;
+  background-size: cover;      /* make image cover the whole wrapper */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* prevent repeating */}
+
+/* Glassmorphism Form */
+.container {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0px 4px 20px rgba(0, 128, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(34, 139, 34, 0.6);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.title {
+  margin-bottom: 1.5rem;
+  color: #2d572c; /* Deep green */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.35);
+  color: #1c3e1c;
+  transition: all 0.3s ease-in-out;
+}
+
+.input::placeholder {
+  color: rgba(50, 100, 50, 0.6);
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.5);
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #28a745, #218838);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #218838, #28a745);
+  transform: scale(1.05);
+}
+
+/* Floating Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    padding: 1.5rem;
+  }
+}
